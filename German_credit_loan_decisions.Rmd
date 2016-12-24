@@ -1,0 +1,42 @@
+---
+title: "Germn_credit_data_decisions"
+author: "Vipul Pandey"
+date: "December 24, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+Target: Identify bad loans from the German credit data.
+
+The loan application problem is a classification problem: you want to identify loan
+applicants who are likely to default. Three common approaches in such cases are
+logistic regression, Naive Bayes classifiers, and decision trees
+
+```{r cars}
+library(rpart)
+library(rpart.plot)
+
+load('GCDData.RData')
+model <- rpart(Good.Loan ~
+Duration.in.month +
+Installment.rate.in.percentage.of.disposable.income +
+Credit.amount +
+Other.installment.plans,
+data=d,
+control=rpart.control(maxdepth=4),
+method="class")
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+rpart.plot(model)
+```
+
+

@@ -1,0 +1,7 @@
+name: Publish Document
+account: rpubs
+server: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/237352/e4d2dba021d34a9cb19b47ed27fef08f
+bundleId: https://api.rpubs.com/api/v1/document/237352/e4d2dba021d34a9cb19b47ed27fef08f
+url: http://rpubs.com/vvipull/237352
+when: 1482567549.6507
